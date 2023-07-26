@@ -4,7 +4,8 @@
   "description": "blessytransport_backend API ",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watchAll "
+    "test": "jest --watchAll ",
+    "start": "node index.js"
   },
   "engines": {
     "node": "19.4.0"
