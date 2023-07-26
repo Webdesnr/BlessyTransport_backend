@@ -1,9 +1,9 @@
-const { Quote, validateCustomer } = require("../model/quote");
+const { Quote, validateQuote } = require("../model/quote");
 const express = require("express");
 const router = express.Router();
 
 router.post("/", async (req, res) => {
-  const { error } = validateCustomer(req.body);
+  const { error } = validateQuote(req.body);
   if (error) return res.status(400).send(error.details[0].message);
 
   const quote = new Quote({

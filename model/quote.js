@@ -12,7 +12,7 @@ const Quote = mongoose.model(
   })
 );
 
-function validateCustomer(quote) {
+function validateQuote(quote) {
   const schema = Joi.object({
     name: Joi.string().min(3).required(),
     phone: Joi.number().required(),
@@ -25,4 +25,4 @@ function validateCustomer(quote) {
 }
 
 exports.Quote = Quote;
-exports.validateCustomer = validateCustomer;
+exports.validateQuote = validateQuote;
